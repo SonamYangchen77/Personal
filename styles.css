@@ -8,13 +8,13 @@
 
 body {
     background-color: #d5ee7b;
-    color: #050404;
+    color: #060606;
     line-height: 1.6;
-    font-size: 1rem;
 }
 
-section {
-    padding: 40px 0;
+a {
+    text-decoration: none;
+    color: #eae4e4;
 }
 
 .container {
@@ -22,109 +22,92 @@ section {
     margin: 0 auto;
 }
 
-/* Introduction Section */
-#intro-section {
-    background-color: #d5ee7b;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+section {
+    padding: 40px 0;
+}
+
+/* About Section */
+h2 {
     text-align: center;
-}
-
-#intro-section h2 {
-    font-size: 2em;
     margin-bottom: 20px;
+    font-size: 2.5em;
 }
 
-#intro-section p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.intro-image {
+/* Image styles */
+.responsive-image {
     width: 100%;
     height: auto;
-    border-radius:10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Upload Section */
-#upload-section {
-    background-color: #d5ee7b;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    color: #0d0d0d;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-input[type="file"] {
     display: block;
-    width: 80%;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin: 20px 0;
 }
 
-textarea {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
+/* Benefits Section */
+.benefit-list {
+    display: flex; /* Use flexbox to display items in a row */
+    justify-content: center; /* Center items horizontally */
+    gap: 30px; /* Add some space between the list items */
+    padding: 0;
+    list-style-type: none; /* Remove bullets */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
-.upload-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1de807;
-    border: none;
+.benefit-list li {
     font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    width: 200px; /* Make button shorter */
-    transition: background-color 0.3s;
+    line-height: 1.5;
+    text-align: center;
+    flex: 1 1 auto; /* Allow list items to adjust their size */
+    margin-bottom: 20px;
+    max-width: 200px; /* Limit the width of each list item */
+    padding: 20px; /* Padding for better spacing inside the circular box */
+    background-color: rgb(189, 130, 130); /* Background color for the circle */
+    color: rgb(12, 11, 11); /* Text color */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Height to create the circular shape */
+    width: 200px; /* Width to make it a perfect circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Hover effect */
 }
 
-.upload-button:hover {
-    background-color: #e67e22;
+.benefit-list li:hover {
+    transform: translateY(-10px); /* Hover effect to lift the circle */
 }
 
-/* Gallery Section */
-#gallery-section {
-    background-color: #0d0d0d;
-    padding: 20px;
-}
-
-#gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/* Karate Techniques Section */
+.techniques {
+    display: flex;
+    justify-content: space-between;
     gap: 20px;
 }
 
-.gallery-item {
-    background-color: #ecf0f1;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.gallery-item img,
-.gallery-item video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gallery-item p {
-    
-    padding: 10px;
+.technique {
     text-align: center;
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #0b0a0a; /* Border around each technique box */
+    background-color: #fff; /* Background color for the box */
+    box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1); /* Slight shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.technique:hover {
+    transform: translateY(-10px); /* Hover effect for lifting the box */
+}
+
+.technique img {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Ensure all images are the same size */
+    margin-bottom: 15px;
+}
+
+.technique p {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #040303;
 }
 
 /* Mobile Styles */
@@ -133,17 +116,19 @@ textarea {
         width: 90%;
     }
 
-    h1 {
-        font-size: 2em;
+    /* Karate Techniques: Stack images vertically on small screens */
+    .techniques {
+        flex-direction: column;
+        align-items: center;
     }
 
-    h2 {
-        font-size: 1.5em;
+    .technique {
+        margin-bottom: 20px;
     }
 
-    .upload-button {
-        font-size: 1em;
-        width: 150px; /* Smaller button on mobile */
+    /* Adjust the list for mobile screens */
+    .benefit-list li {
+        font-size: 1.1em;
     }
 }
 .back-to-index {
