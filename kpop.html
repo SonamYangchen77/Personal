@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Playlist Layout</title>
+    <link rel="stylesheet" href="kpo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Playlists</h1>
+
+        <!-- Back to Index Button -->
+        <div class="back-to-index">
+            <a href="index.html" class="back-button">Back to Index</a>
+        </div>
+
+        <!-- Playlist container -->
+        <div id="playlist-container" class="playlist-container">
+            <!-- Playlist cards will be added here dynamically -->
+        </div>
+
+        <!-- Current song player -->
+        <div id="current-song-player" class="current-song-player" style="display: none;">
+            <div id="current-song-title" class="current-song-title"></div>
+            <audio id="audio-player" controls></audio>
+            <div class="song-navigation">
+                <button onclick="playPreviousSong()"><</button>
+                <button onclick="playNextSong()">></button>
+            </div>
+        </div>
+
+        <!-- Add New Playlist -->
+        <div class="add-playlist-form">
+            <input type="text" id="new-playlist-name" placeholder="Enter playlist name" />
+            <button onclick="addNewPlaylist()">Add Playlist</button>
+        </div>
+
+        <!-- Add New Song Form -->
+        <div class="add-song-form" style="display: none;">
+            <input type="text" id="new-song-title" placeholder="Enter song title" />
+            <input type="url" id="new-song-url" placeholder="Enter song URL" />
+            <button onclick="addNewSongToPlaylist()">Add Song</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
