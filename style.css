@@ -1,127 +1,164 @@
-/* Base Styles */
+/* Apply background color or image to the whole body */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f9;  /* Light background color */
     margin: 0;
     padding: 0;
+}
+
+/* Container styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);  /* Light opaque background for content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #d5ee7b;
 }
 
-.family-tree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.generation {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* Member Cards */
-.member {
+/* Heading styling */
+h1 {
     text-align: center;
-    max-width: 150px;
-    flex: 1;
-}
-
-.member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #333;
-    margin-bottom: 10px;
-}
-
-.member p {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 2em;
     color: #333;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .member img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .member p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .generation {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .member {
-        max-width: 120px;
-    }
-}
-.back-to-home {
-    font-size: 16px;
-    color: #007BFF;
-    text-decoration: none;
-    padding: 10px;
-    margin: 10px 0;
-    display: block;
-}
-
-.back-to-home:hover {
-    color: #0056b3;
-}
-.family-tree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.generation {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.member {
-    text-align: center;
-    margin: 15px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
+/* Button styling */
+.open-form-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #000000;
+    color: white;
+    border: none;
     border-radius: 5px;
-}
-
-.dropdown:hover .dropdown-content {
+    cursor: pointer;
     display: block;
+    margin: 0 auto 30px auto;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.open-form-btn:hover {
+    background-color: #705ad5;
 }
 
-/* Flexbox for children to align in a row */
-.generation .member {
-    margin-right: 40px;
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Drama card styles */
+.drama-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.drama-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.drama-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.drama-card h3 {
+    padding: 10px;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.drama-card .dropdown {
+    padding: 10px;
+}
+
+.drama-card .dropdown button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drama-card .dropdown button:hover {
+    background-color: #45a049;
+}
+
+.episode-list {
+    display: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.episode-list li {
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+}
+
+.episode-list li:hover {
+    background-color: #ddd;
+}
+
+/* Video player section */
+.video-player {
+    display: none;
+    text-align: center;
+}
+
+.close-video-btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-video-btn:hover {
+    background-color: #ff4d2d;
 }

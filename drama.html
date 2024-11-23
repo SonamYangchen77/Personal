@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drama Watchlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Drama Watchlist</h1>
+        <div class="back-to-index">
+            <a href="index.html" class="back-button">Back to Index</a>
+          </div>
+        <!-- Button to open the Add New Drama form -->
+        <button id="open-form-btn" class="open-form-btn">Add New Drama</button>
+
+        <!-- Modal for adding new drama -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-form-btn">&times;</span>
+                <h2>Add a New Drama</h2>
+                <form id="drama-form">
+                    <label for="drama-title">Drama Title:</label>
+                    <input type="text" id="drama-title" placeholder="Enter drama title" required>
+                    
+                    <label for="drama-image">Image URL:</label>
+                    <input type="text" id="drama-image" placeholder="Enter image URL" required>
+                    
+                    <label for="episode1">Episode 1 URL:</label>
+                    <input type="text" id="episode1" placeholder="Enter episode 1 URL" required>
+                    
+                    <label for="episode2">Episode 2 URL:</label>
+                    <input type="text" id="episode2" placeholder="Enter episode 2 URL" required>
+                    
+                    <label for="episode3">Episode 3 URL:</label>
+                    <input type="text" id="episode3" placeholder="Enter episode 3 URL" required>
+                    
+                    <button type="submit">Add Drama</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Display Drama List -->
+        <div id="drama-list" class="drama-list">
+            <!-- Dynamic content will be added here -->
+        </div>
+        
+        <!-- Video player section -->
+        <div id="video-player" class="video-player">
+            <h3>Episode Player</h3>
+            <video id="video-element" controls controlsList="nodownload">
+                <source id="video-source" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="close-video-btn" class="close-video-btn">Close Player</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
