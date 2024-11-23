@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Hangout - Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="back-to-index">
+        <a href="index.html" class="back-button">Back to Index</a>
+      </div>
+    <!-- Introduction Section with Image and Description -->
+    <section id="intro-section" class="section">
+        <div class="container">
+            <h2>Capture Your Moments!!</h2>
+            <p>Share your best memories with friends. Upload your favorite photos and videos below and let’s relive the moments together!</p>
+            <img src="hhhh.jpg" class="intro-image">
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery-section" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div id="gallery" class="gallery">
+                <!-- Uploaded images/videos will appear here -->
+            </div>
+        </div>
+    </section>
+     <!-- Upload Section -->
+     <section id="upload-section" class="section">
+        <div class="container">
+            <h2>Upload Your Moments</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="file-input" name="file" accept="image/*, video/*" multiple>
+                <textarea id="description-input" name="description" placeholder="Enter a description..." rows="4"></textarea>
+                <button type="submit" class="upload-button">Upload</button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
