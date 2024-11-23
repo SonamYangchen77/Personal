@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Folder Structure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>My Idols</h1>
+    </div>
+    <div class="back-to-index">
+      <a href="index.html" class="back-button">Back to Index</a>
+    </div>
+
+  <div class="folder-container">
+    <div class="folder" id="folder1">
+      <div class="folder-header" onclick="toggleFolder('folder1')">
+        <img src="btslogo.jpeg" class="folder-logo">
+        <h2>BTS</h2>
+      </div>
+      <div class="folder-content" id="folder1-content">
+        <div class="images" id="folder1-images">
+          <!-- Preloaded images will be displayed here -->
+          <img src="bts1.jpeg">
+          <img src="bts2.jpeg" >
+        </div>
+        <button onclick="addImage('folder1')">Add Image</button>
+      </div>
+    </div>
+
+    <div class="folder" id="folder2">
+      <div class="folder-header" onclick="toggleFolder('folder2')">
+        <img src="enhalogo.jpeg" class="folder-logo">
+        <h2>Enhypen</h2>
+      </div>
+      <div class="folder-content" id="folder2-content">
+        <div class="images" id="folder2-images">
+          <!-- Preloaded images will be displayed here -->
+          <img src="enhy1.jpeg">
+          <img src="enhy2.jpeg">
+        </div>
+        <button onclick="addImage('folder2')">Add Image</button>
+      </div>
+    </div>
+
+    <div class="folder" id="folder3">
+        <div class="folder-header" onclick="toggleFolder('folder3')">
+            <img src="txtlogo.png" class="folder-logo">
+          <h2>TXT</h2>
+        </div>
+        <div class="folder-content" id="folder3-content">
+          <div class="images" id="folder3-images">
+            <!-- Preloaded images will be displayed here -->
+            <img src="txt1.jpeg">
+            <img src="txt2.jpeg" >
+          </div>
+          <button onclick="addImage('folder3')">Add Image</button>
+        </div>
+      </div>
+
+      <div class="folder" id="folder4">
+        <div class="folder-header" onclick="toggleFolder('folder4')">
+            <img src="sevelogo.png" class="folder-logo">
+          <h2>Seventeen</h2>
+        </div>
+        <div class="folder-content" id="folder4-content">
+          <div class="images" id="folder4-images">
+            <!-- Preloaded images will be displayed here -->
+            <img src="seven1.jpeg" >
+            <img src="seven2.jpeg" >
+          </div>
+          <button onclick="addImage('folder4')">Add Image</button>
+        </div>
+      </div>
+
+      <div class="folder" id="folder5">
+        <div class="folder-header" onclick="toggleFolder('folder5')">
+            <img src="bndlogo.jpeg" class="folder-logo">
+          <h2>BoyNextdoor</h2>
+        </div>
+        <div class="folder-content" id="folder5-content">
+          <div class="images" id="folder5-images">
+            <!-- Preloaded images will be displayed here -->
+            <img src="bnd1.jpeg" >
+            <img src="bnd2.jpeg" >
+          </div>
+          <button onclick="addImage('folder5')">Add Image</button>
+        </div>
+      </div>
+
+      <div class="folder" id="folder6">
+        <div class="folder-header" onclick="toggleFolder('folder6')">
+            <img src="zb1logo.png" class="folder-logo">
+          <h2>ZB1</h2>
+        </div>
+        <div class="folder-content" id="folder6-content">
+          <div class="images" id="folder6-images">
+            <!-- Preloaded images will be displayed here -->
+            <img src="zb11.jpeg" >
+            <img src="zb12.jpeg" >
+          </div>
+          <button onclick="addImage('folder6')">Add Image</button>
+        </div>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
